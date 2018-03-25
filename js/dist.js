@@ -27,10 +27,10 @@ var calculate = () => {
     currentCost.metropass = input.weeksPerSemester > 12 ? metropass * 4 : (input.weeksPerSemester > 8 ? metropass * 3 : (input.weeksPerSemester > 4 ? metropass * 2 : metropass));
 
     $('#currentSingleFare').html(currentCost.singleFare);
-    $('#resultSingleFare').html((currentCost.singleFare > uPass ? 'U-Pass would save you $' : 'U-Pass would lose you $') + Math.abs(currentCost.singleFare - uPass));
+    $('#resultSingleFare').html((currentCost.singleFare > uPass ? 'U-Pass would save you $' : 'U-Pass would lose you $') + Math.abs(currentCost.singleFare - uPass) + ' per semester');
     
     $('#currentMetropass').html(currentCost.metropass);
-    $('#resultMetropass').html((currentCost.metropass > uPass ? 'U-Pass would save you $' : 'U-Pass would lose you $') + Math.abs(currentCost.metropass - uPass));
+    $('#resultMetropass').html((currentCost.metropass > uPass ? 'U-Pass would save you $' : 'U-Pass would lose you $') + Math.abs(currentCost.metropass - uPass) + ' per semester');
 
     if (currentCost.singleFare > uPass) {
         $('#resultSingleFare').removeClass('text-danger').addClass('text-success');
