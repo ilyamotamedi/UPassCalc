@@ -1,0 +1,101 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>U-Pass Cost Calculator</title>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+        
+        <script src="js/dist.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body class="bg-dark text-light">
+        <div class="container">
+            <h4 class="display-4 font-weight-bold text-center my-5">U-Pass Cost Calculator</h4>
+            <p class="mb-5">This calculator should give you an idea of how the proposed U-Pass program (for U of T St. George, Ryerson University, and George Brown College) compares to your current TTC expenses. Answer the 6 questions about your transportation requirements and see if the proposed pass is worth the increase in cost to you.<br><br>
+                <b class="font-weight-bold">Please vote considerately, do your own research, and keep in mind that finances aren't the only factor.</b></p>
+            <form class="card text-dark">
+                <h5 class="card-header text-center"><i class="fas fa-edit"></i> Your Information</h5>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="daysPerWeek" class="col-md-9 col-form-label">Days Traveled/Week</label>
+                        <div class="col-md-3">
+                            <input type="number" min="1" max="7" class="form-control" id="daysPerWeek" value="5" placeholder="5">  
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="faresPerDay" class="col-md-9 col-form-label">Fares Paid Per Travel Day</label>
+                        <div class="col-md-3">
+                            <input type="number" min="1" max="8" class="form-control" id="faresPerDay" value="2" placeholder="2">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="goTransit" class="col-md-9 col-form-label">Does your trip involve a GO Transit transfer to/from the TTC?<sup>1</sup></label>
+                        <div class="col-md-3">
+                            <select class="form-control" id="goTransit">
+                                <option value="1.5">Yes</option>
+                                <option value="0" selected>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="prestoCard" class="col-md-9 col-form-label">Do you use a PRESTO card to pay TTC fares?</label>
+                        <div class="col-md-3">
+                            <select class="form-control" id="prestoCard">
+                                <option value="1" selected>Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="ageRange" class="col-md-9 col-form-label">Indicate your age range</label>
+                        <div class="col-md-3">
+                            <select class="form-control" id="ageRange">
+                                <option value="1" selected>20 or Over</option>
+                                <option value="0">19 or Under</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="weeksPerSemester" class="col-md-9 col-form-label">How many weeks of the semester<sup>2</sup> do you expect to travel like this?</label>
+                        <div class="col-md-3">
+                            <input type="number" min="1" max="16" class="form-control" id="weeksPerSemester" value="12" placeholder="12">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-9"></div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" id="calculate"><i class="fas fa-calculator"></i> Calculate</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary invisible"></button>
+                </div>
+                <h5 class="card-footer text-center border-bottom"><i class="fas fa-balance-scale"></i> Your Cost Comparison</h5>
+                <div class="card-body">
+                    <p>Based on the information<sup>3</sup> entered above...</p>
+                    <h6>If you currently use <b class="font-weight-bold">single fares</b> to pay for transportation, U-Pass would <b class="font-weight-bold" id="resultSingleFare"></b> you money, since you currently pay <b class="font-weight-bold">$</b><b class="font-weight-bold" id="currentSingleFare"></b> per semester and U-Pass would cost $282.50 per semester<sup>5</sup>.</h6>
+                    <h6>If you currently use <b class="font-weight-bold">a metropasss</b><sup>4</sup> to pay for transportation, U-Pass would <b class="font-weight-bold" id="resultMetropass"></b> you money, since you currently pay <b class="font-weight-bold">$</b><b class="font-weight-bold" id="currentMetropass"></b> per semester and U-Pass would cost $282.50 per semester<sup>5</sup>.</h6>                    
+                </div>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="container text-muted">
+                <small>
+                    <sup>1</sup> Note that if only some of your trips involve a GO Transfer, or if this response varies from week to week, an exact estimate of current costs is not possible. You can however assume that the current cost to you would be somewhere between the values seen when answering "Yes" and those seen when answering "No".
+                    <br><br><sup>2</sup> Semesters are 4 months long (Sep-Dec and Jan-Apr).
+                    <br><br><sup>3</sup> Please keep in mind that your behaviour and transportation requirements are subject to change. Do not make your decision based solely on information seen here. Do your research. The author of this website is not responsible for any personal injuries, losses, or damages to you or your property resulting from use of this.
+                    <br><br><sup>4</sup> Note that the calculator has no way of discerning whether or not the weeks you travel are consecutive. If you travel only on the first week and last two weeks of the semester, for example, the cost of the metropass may display as $116.75, but in reality you would have to purchase two metropasses for two separate months at a cost of $233.50.
+                    <br><br><sup>5</sup> According to <a href="https://www.reddit.com/r/UofT/comments/85wqn0/ttc_approves_upass_for_280_per_term/dw176b3/">this Reddit comment</a> by UTSU President Mathias Memmel.
+                </small>
+            </div>
+        </footer>
+    </body>
+</html>
