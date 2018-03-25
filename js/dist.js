@@ -16,7 +16,6 @@ var currentCost = {
 };
 
 var calculate = () => {
-    $.validate({lang: 'en'});
     input.daysPerWeek = Number($('#daysPerWeek').val());
     input.faresPerDay = Number($('#faresPerDay').val());
     input.goTransit = Number($('#goTransit').val());
