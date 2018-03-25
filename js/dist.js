@@ -29,7 +29,7 @@ var calculate = () => {
     
     currentCost.singleFare = Math.round((input.daysPerWeek * input.faresPerDay * ((input.ageRange == 0 ? (input.prestoCard == 1 ? 2.05 : 2.1) : (input.prestoCard == 1 ? 3 : 3.25)) - input.goTransit)) * input.weeksPerSemester, 2);
     currentCost.metropass = input.weeksPerSemester > 12 ? metropass * 4 : (input.weeksPerSemester > 8 ? metropass * 3 : (input.weeksPerSemester > 4 ? metropass * 2 : metropass));
-    console.log(currentCost.singleFare, currentCost.metropass);
+    // console.log(currentCost.singleFare, currentCost.metropass);
 
     $('#currentSingleFare').html(currentCost.singleFare);
     $('#resultSingleFare').html(currentCost.singleFare > uPass ? 'save' : 'lose');
@@ -52,8 +52,5 @@ var calculate = () => {
 
 
 $(document).ready(() => {
-    calculate();
-    $('#calculate').click(() => {
-        calculate();
-    });
+    setInterval(() => { calculate(); }, 500); 
 });

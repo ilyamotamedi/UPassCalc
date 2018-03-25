@@ -28,13 +28,30 @@
                     <div class="form-group row">
                         <label for="daysPerWeek" class="col-md-9 col-form-label">How many days per week do you use the TTC to get around?</label>
                         <div class="col-md-3">
-                            <input type="number" min="1" max="7" class="form-control" id="daysPerWeek" value="5" placeholder="5">  
+                            <select class="form-control" id="daysPerWeek">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>  
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="faresPerDay" class="col-md-9 col-form-label">How many TTC fares do you pay on each of those days?</label>
                         <div class="col-md-3">
-                            <input type="number" min="1" max="8" class="form-control" id="faresPerDay" value="2" placeholder="2">
+                            <select class="form-control" id="faresPerDay">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -67,16 +84,26 @@
                     <div class="form-group row">
                         <label for="weeksPerSemester" class="col-md-9 col-form-label">How many weeks of the semester<sup>2</sup> do you expect to use the TTC like this?</label>
                         <div class="col-md-3">
-                            <input type="number" min="1" max="16" class="form-control" id="weeksPerSemester" value="12" placeholder="12">
+                            <select class="form-control" id="weeksPerSemester">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12" selected>12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-9"></div>
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-primary" id="calculate"><i class="fas fa-calculator"></i> Calculate</button>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary invisible"></button>
                 </div>
                 <h5 class="card-footer text-center border-bottom"><i class="fas fa-balance-scale"></i> Your Cost Comparison</h5>
                 <div class="card-body">
