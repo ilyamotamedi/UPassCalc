@@ -35,7 +35,19 @@ var calculate = () => {
     $('#resultSingleFare').html(currentCost.singleFare > uPass ? 'save' : 'lose');
     
     $('#currentMetropass').html(currentCost.metropass);
-    $('#resultMetropass').html(currentCost.metropass > uPass ? 'save' : 'lose');    
+    $('#resultMetropass').html(currentCost.metropass > uPass ? 'save' : 'lose');
+
+    if (currentCost.singleFare > uPass) {
+        $('#resultSingleFare').removeClass('text-danger').addClass('text-success');
+    }else {
+        $('#resultSingleFare').removeClass('text-success').addClass('text-danger');        
+    }
+
+    if (currentCost.metropass > uPass) {
+        $('#resultMetropass').removeClass('text-danger').addClass('text-success');
+    }else {
+        $('#resultMetropass').removeClass('text-success').addClass('text-danger');        
+    }
 };
 
 
