@@ -20,28 +20,29 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-        <script src="js/dist.js"></script>
+        <script src="js/app.js"></script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body class="bg-white text-dark">
+    <body>
         <div class="container">
             <h4 class="display-4 font-weight-bold text-center my-5">U-Pass Cost Calculator</h4>
             <p class="mb-5">This calculator should give you an idea of how the proposed U-Pass program (for U of T St. George, Ryerson University, OCADU, and George Brown College) compares to your current TTC expenses. Answer the 6 questions about your transportation requirements and see if the proposed pass is worth the increase in cost to you.<br><br>
                 <b class="font-weight-bold">Don't know what U-Pass is?</b> <a href="https://thevarsity.ca/tag/u-pass/" target="_blank">The Varsity</a> and <a href="https://www.thestar.com/news/gta/2018/03/20/ttc-board-approves-u-pass-for-post-secondary-students.html" target="_blank">the Star</a> have covered it in detail.<br><br>
                 <b class="font-weight-bold">Please vote considerately, do your own research, and keep in mind that finances aren't the only factor.</b></p>
-            <form class="card text-dark">
+            <form class="card">
                 <h5 class="card-header text-center"><i class="fas fa-edit"></i> Your Information</h5>
                 <div class="card-body">
                     <div class="form-group row">
                         <label for="daysPerWeek" class="col-md-9 col-form-label">How many days per week do you use the TTC to get around?</label>
                         <div class="col-md-3">
                             <select class="form-control" id="daysPerWeek">
+                                <option value="0">0</option>                                
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5" selected>5</option>
+                                <option value="4" selected>4</option>
+                                <option value="5">5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                             </select>  
