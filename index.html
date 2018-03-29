@@ -23,103 +23,101 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="bg-dark text-light">
         <div class="container">
             <h4 class="display-4 font-weight-bold text-center my-5">U-Pass Cost Calculator</h4>
             <p class="mb-5">This calculator should give you an idea of how the proposed U-Pass program (for U of T St. George, Ryerson University, OCADU, and George Brown College) compares to your current TTC expenses. Answer the 6 questions about your transportation requirements and see if the proposed pass is worth the increase in cost to you.<br><br>
                 <b class="font-weight-bold">Don't know what U-Pass is?</b> <a href="https://thevarsity.ca/tag/u-pass/" target="_blank">The Varsity</a> and <a href="https://www.thestar.com/news/gta/2018/03/20/ttc-board-approves-u-pass-for-post-secondary-students.html" target="_blank">the Star</a> have covered it in detail.<br><br>
                 <b class="font-weight-bold">Please vote considerately, do your own research, and keep in mind that finances aren't the only factor.</b></p>
-            <form class="card">
-                <h5 class="card-header text-center"><i class="fas fa-edit"></i> Your Information</h5>
-                <div class="card-body">
-                    <div class="form-group row">
-                        <label for="daysPerWeek" class="col-lg-9 col-form-label">How many days per week do you use the TTC to get around?</label>
-                        <div class="col-lg-3">
-                            <select class="form-control" id="daysPerWeek">
-                                <option value="0">0</option>                                
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4" selected>4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                            </select>  
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="faresPerDay" class="col-lg-9 col-form-label">How many TTC fares do you pay on each of those days?</label>
-                        <div class="col-lg-3">
-                            <select class="form-control" id="faresPerDay">
-                                <option value="1">1</option>
-                                <option value="2" selected>2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="goTransit" class="col-lg-9 col-form-label">Does each trip involve a GO Transit transfer to/from the TTC?<sup>1</sup></label>
-                        <div class="col-lg-3">
-                            <select class="form-control" id="goTransit">
-                                <option value="1.5">Yes</option>
-                                <option value="0" selected>No</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="prestoCard" class="col-lg-9 col-form-label">Do you use a PRESTO card to pay TTC fares?</label>
-                        <div class="col-lg-3">
-                            <select class="form-control" id="prestoCard">
-                                <option value="1" selected>Yes</option>
-                                <option value="0">No</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="ageRange" class="col-lg-9 col-form-label">Indicate your age range for fare calculation</label>
-                        <div class="col-lg-3">
-                            <select class="form-control" id="ageRange">
-                                <option value="1" selected>20 or Over</option>
-                                <option value="0">19 or Under</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="weeksPerSemester" class="col-lg-9 col-form-label">On what weeks of the semester do you expect to use the TTC like this?</label>
-                        <div class="col-lg-3 text-lg-right">
-                            <select multiple class="form-control" id="weeksPerSemester">
-                                <option value="1" selected>Week 1</option>
-                                <option value="2" selected>Week 2</option>
-                                <option value="3" selected>Week 3</option>
-                                <option value="4" selected>Week 4</option>
-                                <option value="5" selected>Week 5</option>
-                                <option value="6" selected>Week 6</option>
-                                <option value="7" selected>Week 7</option>
-                                <option value="8" selected>Week 8</option>
-                                <option value="9">Week 9</option>
-                                <option value="10" selected>Week 10</option>
-                                <option value="11" selected>Week 11</option>
-                                <option value="12" selected>Week 12</option>
-                                <option value="13" selected>Week 13</option>
-                                <option value="14">Week 14</option>
-                                <option value="15">Week 15</option>
-                                <option value="16">Week 16</option>
-                            </select>
-                            <small class="form-text text-muted text-center">You can use <kbd class="bg-secondary text-white">ctrl</kbd> / <kbd class="bg-secondary text-white">⌘</kbd> and <kbd class="bg-secondary text-white">shift</kbd> to select/deselect multiple weeks.</small>
-                        </div>
+            <form class="">
+                <h5><i class="fas fa-edit"></i> Your Information</h5>
+                <hr class="border-light">
+                <div class="form-group row">
+                    <label for="daysPerWeek" class="col-lg-9 col-form-label">How many days per week do you use the TTC to get around?</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="daysPerWeek">
+                            <option value="0">0</option>                                
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4" selected>4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>  
                     </div>
                 </div>
-                <h5 class="card-footer text-center border-bottom"><i class="fas fa-balance-scale"></i> Your Cost Comparison</h5>
-                <div class="card-body">
-                    <p>Based on the information<sup>2</sup> entered above...</p>
-                    <h6>If you currently use <b class="font-weight-bold">single fares</b> to pay for the TTC, <b class="font-weight-bold" id="resultSingleFare"></b>, since you currently pay <b class="font-weight-bold">$</b><b class="font-weight-bold" id="currentSingleFare"></b> per semester and U-Pass would cost $282.50 per semester<sup>3</sup>.</h6>
-                    <h6>If you currently use <b class="font-weight-bold">a metropasss</b> to pay for the TTC, <b class="font-weight-bold" id="resultMetropass"></b>, since you currently pay <b class="font-weight-bold">$</b><b class="font-weight-bold" id="currentMetropass"></b> per semester and U-Pass would cost $282.50 per semester<sup>3</sup>.</h6>                    
+                <div class="form-group row">
+                    <label for="faresPerDay" class="col-lg-9 col-form-label">How many TTC fares do you pay on each of those days?</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="faresPerDay">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
                 </div>
+                <div class="form-group row">
+                    <label for="goTransit" class="col-lg-9 col-form-label">Does each trip involve a GO Transit transfer to/from the TTC?<sup>1</sup></label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="goTransit">
+                            <option value="1.5">Yes</option>
+                            <option value="0" selected>No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="prestoCard" class="col-lg-9 col-form-label">Do you use a PRESTO card to pay TTC fares?</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="prestoCard">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ageRange" class="col-lg-9 col-form-label">Indicate your age range for fare calculation:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="ageRange">
+                            <option value="1" selected>20 or Over</option>
+                            <option value="0">19 or Under</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="weeksPerSemester" class="col-lg-9 col-form-label">On what weeks of the semester do you expect to use the TTC like this?</label>
+                    <div class="col-lg-3 text-lg-right">
+                        <select multiple class="form-control" id="weeksPerSemester">
+                            <option value="1" selected>Week 1</option>
+                            <option value="2" selected>Week 2</option>
+                            <option value="3" selected>Week 3</option>
+                            <option value="4" selected>Week 4</option>
+                            <option value="5" selected>Week 5</option>
+                            <option value="6" selected>Week 6</option>
+                            <option value="7" selected>Week 7</option>
+                            <option value="8" selected>Week 8</option>
+                            <option value="9">Week 9</option>
+                            <option value="10" selected>Week 10</option>
+                            <option value="11" selected>Week 11</option>
+                            <option value="12" selected>Week 12</option>
+                            <option value="13" selected>Week 13</option>
+                            <option value="14">Week 14</option>
+                            <option value="15">Week 15</option>
+                            <option value="16">Week 16</option>
+                        </select>
+                        <small class="form-text text-muted text-center">You can use <kbd class="bg-secondary text-white">ctrl</kbd> / <kbd class="bg-secondary text-white">⌘</kbd> and <kbd class="bg-secondary text-white">shift</kbd> to select/deselect multiple weeks.</small>
+                    </div>
+                </div>
+                <h5><i class="fas fa-balance-scale"></i> Your Cost Comparison</h5>
+                <hr class="border-light">
+                <p>Based on the information<sup>2</sup> entered above...</p>
+                <h6>If you currently use <b class="font-weight-bold">single fares</b> to pay for the TTC, <b class="font-weight-bold" id="resultSingleFare"></b>, since you currently pay <b class="font-weight-bold">$</b><b class="font-weight-bold" id="currentSingleFare"></b> per semester and U-Pass would cost $282.50 per semester<sup>3</sup>.</h6>
+                <h6>If you currently use <b class="font-weight-bold">a metropasss</b> to pay for the TTC, <b class="font-weight-bold" id="resultMetropass"></b>, since you currently pay <b class="font-weight-bold">$</b><b class="font-weight-bold" id="currentMetropass"></b> per semester and U-Pass would cost $282.50 per semester<sup>3</sup>.</h6>                    
             </form>
         </div>
         <footer class="footer mb-3">
