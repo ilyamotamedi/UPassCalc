@@ -1,2 +1,2 @@
 # UPassCalc
-A simple webapp to help students determine how the proposed Toronto U-Pass will affect their finances.
+A simple webapp to help University students in downtown Toronto determine how the proposed TTC U-Pass will affect their finances.
